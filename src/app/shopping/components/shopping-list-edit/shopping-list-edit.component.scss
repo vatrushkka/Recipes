@@ -1,0 +1,59 @@
+.container {
+
+  .form {
+    display: flex;
+
+    .form-item {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: 2vmin;
+
+      input {
+        color: #333;
+        border-radius: 0.5vmin;
+        border: 1px solid #333;
+        outline: none;
+        padding: 1vmin 1.5vmin;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2vmin;
+      }
+    }
+
+    .name {
+      width: 40vmin;
+      margin-right: 1vmin;
+    }
+
+    .amount {
+      width: 10vmin;
+    }
+  }
+
+  .buttons {
+    width: 30vmin;
+    margin-top: 1vmin;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding: 1vmin 2vmin;
+      border: none;
+      border-radius: 0.5vmin;
+      color: #333;
+      font-size: 2vmin;
+    }
+
+    .add-button{
+      background-color: #A7C4BC;
+    }
+
+    .delete-button {
+      background-color: #d08181;
+    }
+
+    .clear-button {
+      background-color: #D7B19D;
+    }
+  }
+}
