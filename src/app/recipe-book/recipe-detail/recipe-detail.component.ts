@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./recipe-detail.component.scss']
 })
 export class RecipeDetailComponent {
+  public show = false;
 }

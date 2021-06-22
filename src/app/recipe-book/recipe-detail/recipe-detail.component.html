@@ -1,1 +1,20 @@
-<p>recipe-detail works!</p>
+<div class="container">
+  <p class="details-header">Recipe name</p>
+
+  <div class="dropdown">
+    <button (click)="show = !show">
+      Manage recipe
+      <i [ngClass]="{'up': show}"></i>
+    </button>
+
+    <div class="dropdown-content" *ngIf="show">
+      <a href="#" class="drop-item">Save data</a>
+
+      <a href="#" class="drop-item">Fetch data</a>
+    </div>
+  </div>
+
+  <p class="details">Details</p>
+
+  <p class="details">Ingredients</p>
+</div>
