@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="left">
+    <div class="items-container">
+      <a href="#" class="header">Recipe Book</a>
+
+      <a href="#" class="header-item">Recipes</a>
+
+      <a href="#" class="header-item">Shopping List</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="drop" (click)="open = !open; openMenu()">
+    <button  class="drop">Manage</button>
+
+      <i id="arrow"></i>
+    </div>
+
+    <div class="dropdown-content" *ngIf="open">
+      <a href="#" class="drop-item">Save data</a>
+
+      <a href="#" class="drop-item">Fetch data</a>
+    </div>
+  </div>
+</div>
