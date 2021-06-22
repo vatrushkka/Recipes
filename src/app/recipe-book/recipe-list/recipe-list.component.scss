@@ -1,5 +1,14 @@
-.container {
-  display: flex;
+.recipes {
+
+  button {
+    margin: 1vmin 2vmin;
+    padding: 1vmin 2vmin;
+    border: none;
+    border-radius: 0.5vmin;
+    background-color: #D7B19D;
+    color: #333;
+    font-size: 2vmin;
+  }
 
   .recipe {
     display: flex;
