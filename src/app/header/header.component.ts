@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public open = false;
-
-  public openMenu(): void {
-    document.getElementById('arrow').classList.toggle('up');
-  }
 }

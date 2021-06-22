@@ -10,10 +10,10 @@
   </div>
 
   <div class="dropdown">
-    <div class="drop" (click)="open = !open; openMenu()">
-    <button  class="drop">Manage</button>
+    <div class="drop" (click)="open = !open">
+      <button  class="drop">Manage</button>
 
-      <i id="arrow"></i>
+      <i id="arrow" [ngClass]="{'up': open}"></i>
     </div>
 
     <div class="dropdown-content" *ngIf="open">
