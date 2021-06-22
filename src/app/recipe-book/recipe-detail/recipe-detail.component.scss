@@ -1,7 +1,9 @@
 .container {
+  padding-left: 1vmin;
 
   .details-header {
-
+    font-size: 3vmin;
+    margin: 1.5vmin 0 2vmin;
   }
 
   .dropdown {
@@ -38,8 +40,9 @@
       border-radius: 0.5vmin;
       background-color: #f1f1f1;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      top: 7vmin;
+      top: 4.5vmin;
       z-index: 1;
+      width: 13.2vmin;
 
       .drop-item {
         font-size: 2vmin;
