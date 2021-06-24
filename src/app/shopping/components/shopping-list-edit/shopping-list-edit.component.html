@@ -3,18 +3,18 @@
     <div class="form-item name">
       <label>Name</label>
 
-      <input type="text">
+      <input type="text" #nameInput>
     </div>
 
     <div class="form-item amount">
       <label>Amount</label>
 
-      <input type="number" min="1" max="10">
+      <input type="number" min="1" max="10" #amountInput>
     </div>
   </form>
 
   <div class="buttons">
-    <button class="add-button">Add</button>
+    <button class="add-button" (click)="onAddIngredient()">Add</button>
 
     <button class="delete-button">Delete</button>
 
