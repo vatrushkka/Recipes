@@ -1,3 +1,7 @@
 .container {
   display: flex;
+
+  app-recipe-detail {
+    width: 140vmin;
+  }
 }

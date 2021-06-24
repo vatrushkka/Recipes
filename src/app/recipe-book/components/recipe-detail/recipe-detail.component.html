@@ -1,22 +1,28 @@
 <div class="container">
-  <p class="details-header">Recipe name</p>
+  <div class="center">
+    <img [src]="recipe.image" alt="{{ recipe.name }}">
 
-  <div class="dropdown">
-    <button (click)="show = !show">
-      Manage recipe
-      <i [ngClass]="{'up': show}"></i>
-    </button>
+    <div class="name">
+      <p class="details-header">{{ recipe.name }}</p>
 
-    <div class="dropdown-content" *ngIf="show">
-      <a href="#" class="drop-item">To shopping list</a>
+      <div class="dropdown">
+        <button (click)="show = !show">
+          Manage recipe
+          <i [ngClass]="{'up': show}"></i>
+        </button>
 
-      <a href="#" class="drop-item">Edit recipe</a>
+        <div class="dropdown-content" *ngIf="show">
+          <a class="drop-item">To shopping list</a>
 
-      <a href="#" class="drop-item">Delete recipe</a>
+          <a class="drop-item">Edit recipe</a>
+
+          <a class="drop-item">Delete recipe</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <p class="details-text">Details</p>
+  <p class="details-text">{{ recipe.description }}</p>
 
   <p class="details-text">Ingredients</p>
 </div>

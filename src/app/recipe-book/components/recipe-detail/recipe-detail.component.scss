@@ -1,54 +1,70 @@
 .container {
+  width: 100%;
   padding-left: 1vmin;
 
-  .details-header {
-    font-size: 3vmin;
-    margin: 1.5vmin 0 2vmin;
-  }
+  .center {
+    display: flex;
+    width: 100%;
 
-  .dropdown {
-    position: relative;
-
-    button {
-      padding: 1vmin 2vmin;
-      border: none;
-      border-radius: 0.5vmin;
-      background-color: #D7B19D;
-      color: #333;
-      font-size: 2vmin;
-
-      i {
-        border: solid #333;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-      }
-
-      .up {
-        transform: rotate(-135deg);
-        -webkit-transform: rotate(-135deg);
-      }
+    img {
+      width: 350px;
+      height: 350px;
+      margin: 1vmin 2vmin 1vmin 1vmin;
+      object-fit: cover;
     }
 
-    .dropdown-content {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      padding: 0.5vmin 4vmin 0.5vmin 1.5vmin;
-      border-radius: 0.5vmin;
-      background-color: #f1f1f1;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      top: 4.5vmin;
-      z-index: 1;
-      width: 13.2vmin;
+    .name {
 
-      .drop-item {
-        font-size: 2vmin;
-        padding: 0.5vmin 0;
-        color: #333;
-        text-decoration: none;
+      .details-header {
+        font-size: 3vmin;
+        margin: 1.5vmin 0 2vmin;
+      }
+
+      .dropdown {
+        position: relative;
+
+        button {
+          padding: 1vmin 2vmin;
+          border: none;
+          border-radius: 0.5vmin;
+          background-color: #D7B19D;
+          color: #333;
+          font-size: 2vmin;
+
+          i {
+            border: solid #333;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+
+          .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+          }
+        }
+
+        .dropdown-content {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          padding: 0.5vmin 4vmin 0.5vmin 1.5vmin;
+          border-radius: 0.5vmin;
+          background-color: #f1f1f1;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          top: 4.5vmin;
+          z-index: 1;
+          width: 13.2vmin;
+
+          .drop-item {
+            font-size: 2vmin;
+            padding: 0.5vmin 0;
+            color: #333;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
