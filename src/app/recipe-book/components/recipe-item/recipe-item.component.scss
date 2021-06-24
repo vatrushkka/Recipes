@@ -1,0 +1,30 @@
+.recipe {
+  display: flex;
+  margin: 1vmin 2vmin;
+  padding: 1vmin 2vmin;
+  border-radius: 0.5vmin;
+  background-color: #ddd;
+  color: #333;
+  text-decoration: none;
+
+  .left-recipe-container {
+    width: 30vmin;
+
+    .recipe-name {
+      font-size: 2vmin;
+    }
+
+    .recipe-description {
+      font-size: 1.5vmin;
+    }
+  }
+
+  .right-recipe-container {
+
+    img {
+      height: 15vmin;
+      width: 15vmin;
+      object-fit: cover;
+    }
+  }
+}

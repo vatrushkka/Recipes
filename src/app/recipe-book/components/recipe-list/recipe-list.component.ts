@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {Recipe} from 'src/app/recipe-book/models/recipe.model';
+import { Recipe } from 'src/app/recipe-book/models/recipe.model';
 
 @Component({
   selector: 'app-recipe-list',

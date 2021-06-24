@@ -1,17 +1,5 @@
-  <div class="recipes">
-    <button>New recipe</button>
+<div class="recipes">
+  <button>New recipe</button>
 
-    <a href="#" class="recipe" *ngFor="let recipe of recipes">
-      <div class="left-recipe-container">
-        <p class="recipe-name">{{ recipe.name }}</p>
-
-        <p class="recipe-description">{{ recipe.description }}</p>
-      </div>
-
-      <div class="right-recipe-container">
-        <img src="{{ recipe.image }}" alt="">
-      </div>
-    </a>
-  </div>
-
-<app-recipe-item></app-recipe-item>
+  <app-recipe-item *ngFor="let recipe of recipes" [recipe]="recipe"></app-recipe-item>
+</div>
