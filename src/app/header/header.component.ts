@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public open = false;
+
+  public onClickedOutside(): void {
+    if (this.open === true) {
+      this.open = false;
+    } else {
+      return;
+    }
+  }
 }
