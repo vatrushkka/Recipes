@@ -6,6 +6,7 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './components/recipe-item/recipe-item.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RecipeListComponent } from './components/recipe-list/recipe-list.compon
     RouterModule.forChild([{
       path: '',
       component: RecipesComponent
-    }])
+    }]),
+    ClickOutsideModule
   ]
 })
 export class RecipesModule { }

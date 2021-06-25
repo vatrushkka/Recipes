@@ -5,7 +5,7 @@
     <div class="name">
       <p class="details-header">{{ recipe.name }}</p>
 
-      <div class="dropdown">
+      <div class="dropdown" (clickOutside)="onClickedOutside()">
         <button (click)="show = !show">
           Manage recipe
           <i [ngClass]="{'up': show}"></i>
