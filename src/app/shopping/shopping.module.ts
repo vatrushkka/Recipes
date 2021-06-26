@@ -9,7 +9,7 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
 import { ShoppingListEditComponent } from './components/shopping-list-edit/shopping-list-edit.component';
 
 // services
-import {ShoppingService} from './components/shopping.service';
+import { ShoppingService } from './services/shopping.service';
 
 @NgModule({
   declarations: [
