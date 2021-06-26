@@ -1,5 +1,5 @@
 <div class="container">
-  <app-recipe-list (recipeItemSelected)="selectedRecipeI = $event"></app-recipe-list>
+  <app-recipe-list></app-recipe-list>
 
   <app-recipe-detail
     *ngIf="selectedRecipeI; else templateInfo"
