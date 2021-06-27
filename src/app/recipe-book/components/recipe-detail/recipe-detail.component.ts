@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Recipe } from 'src/app/recipe-book/models/recipe.model';
 
@@ -9,14 +9,11 @@ import { RecipesService } from '../../services/recipes.service';
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.scss'],
 })
-export class RecipeDetailComponent implements OnInit{
+export class RecipeDetailComponent {
   @Input() recipe: Recipe;
   public show = false;
 
   constructor(public recipeService: RecipesService) {
-  }
-
-  public ngOnInit(): void {
   }
 
   public onClickedOutside(): void {
@@ -28,6 +25,7 @@ export class RecipeDetailComponent implements OnInit{
   }
 
   public toShoppingList(): void {
+    this.show = false;
     this.recipeService.onIngredientsToList(this.recipe.ingredients);
   }
 }

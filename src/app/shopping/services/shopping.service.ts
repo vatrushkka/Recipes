@@ -24,6 +24,5 @@ export class ShoppingService {
   public onAddIngredients(newIngredients: Ingredient[]): void {
     this.ingredients.push(...newIngredients);
     this.ingredientRef.emit(this.ingredients.slice());
-    console.log('i am here');
   }
 }

@@ -38,6 +38,5 @@ export class RecipesService {
   }
   public onIngredientsToList(newIngredients: Ingredient[]): void {
     this.shoppingService.onAddIngredients(newIngredients);
-    console.log('in list');
   }
 }
