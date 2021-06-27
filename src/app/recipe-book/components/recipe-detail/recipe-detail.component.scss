@@ -1,3 +1,7 @@
+p {
+  margin: 0;
+}
+
 .container {
   width: 100%;
   padding-left: 1vmin;
@@ -66,6 +70,18 @@
           }
         }
       }
+    }
+  }
+
+  .details-ingredients {
+
+    .ingredients-header {
+      margin: 1vmin 0;
+    }
+
+    .ingredients {
+      display: flex;
+      margin: 0.5vmin 0;
     }
   }
 }
