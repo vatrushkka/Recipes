@@ -8,9 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './components/shopping-list-edit/shopping-list-edit.component';
 
-// services
-import { ShoppingService } from './services/shopping.service';
-
 @NgModule({
   declarations: [
     ShoppingListComponent,
@@ -23,9 +20,6 @@ import { ShoppingService } from './services/shopping.service';
       component: ShoppingListComponent
     }]),
     FormsModule
-  ],
-  providers: [
-    ShoppingService
   ]
 })
 export class ShoppingModule { }

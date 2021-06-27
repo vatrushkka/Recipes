@@ -9,6 +9,7 @@ import { ClickOutsideModule } from 'ng-click-outside';
 // components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import {ShoppingService} from './shopping/services/shopping.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { HeaderComponent } from './header/header.component';
     ShoppingModule,
     ClickOutsideModule
   ],
-  providers: [],
+  providers: [
+    ShoppingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

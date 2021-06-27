@@ -20,4 +20,10 @@ export class ShoppingService {
     this.ingredients.push(newIngredient);
     this.ingredientRef.emit(this.ingredients.slice());
   }
+
+  public onAddIngredients(newIngredients: Ingredient[]): void {
+    this.ingredients.push(...newIngredients);
+    this.ingredientRef.emit(this.ingredients.slice());
+    console.log('i am here');
+  }
 }
