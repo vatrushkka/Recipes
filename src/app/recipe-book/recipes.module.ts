@@ -11,6 +11,7 @@ import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.
 import { RecipeItemComponent } from './components/recipe-item/recipe-item.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 import { RecipeStartComponent } from './components/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './components/recipe-edit/recipe-edit.component';
 
 // services
 import { RecipesService } from './services/recipes.service';
@@ -21,7 +22,8 @@ import { RecipesService } from './services/recipes.service';
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeListComponent,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     CommonModule,
