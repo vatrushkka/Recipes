@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { RecipesComponent } from './recipe-book/components/recipes/recipes.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -13,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'recipes',
-    loadChildren: () => import('./recipe-book/recipes.module').then(m => m.RecipesModule)
+    component: RecipesComponent
   }
 ];
 
