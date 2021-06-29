@@ -1,10 +1,5 @@
 <div class="container">
   <app-recipe-list></app-recipe-list>
 
-  <app-recipe-detail
-    *ngIf="selectedRecipeI; else templateInfo"
-    [recipe]="selectedRecipeI"
-  ></app-recipe-detail>
-
-  <ng-template #templateInfo><p>select a recipe</p></ng-template>
+  <router-outlet></router-outlet>
 </div>

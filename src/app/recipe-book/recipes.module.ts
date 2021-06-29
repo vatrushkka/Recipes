@@ -10,6 +10,7 @@ import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './components/recipe-item/recipe-item.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
+import { RecipeStartComponent } from './components/recipe-start/recipe-start.component';
 
 // services
 import { RecipesService } from './services/recipes.service';
@@ -20,6 +21,7 @@ import { RecipesService } from './services/recipes.service';
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeListComponent,
+    RecipeStartComponent
   ],
   imports: [
     CommonModule,

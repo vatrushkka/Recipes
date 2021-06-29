@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { RecipesComponent } from './recipe-book/components/recipes/recipes.component';
+import { RecipeDetailComponent } from './recipe-book/components/recipe-detail/recipe-detail.component';
+import { RecipeStartComponent } from './recipe-book/components/recipe-start/recipe-start.component';
 
 const routes: Routes = [
   {
@@ -15,7 +17,17 @@ const routes: Routes = [
   },
   {
     path: 'recipes',
-    component: RecipesComponent
+    component: RecipesComponent,
+    children: [
+      {
+        path: '',
+        component: RecipeStartComponent
+      },
+      {
+        path: ':id',
+        component: RecipeDetailComponent
+      }
+    ]
   }
 ];
 

@@ -2,6 +2,7 @@
   <button>New recipe</button>
 
   <app-recipe-item
+    [routerLink]="['/recipes', recipeItem.name]"
     *ngFor="let recipeItem of recipes"
     [recipe]="recipeItem"
   ></app-recipe-item>
