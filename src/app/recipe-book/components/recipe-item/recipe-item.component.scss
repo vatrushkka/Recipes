@@ -22,9 +22,13 @@
   .right-recipe-container {
 
     img {
-      height: 15vmin;
-      width: 15vmin;
+      height: 10vmin;
+      width: 10vmin;
       object-fit: cover;
     }
   }
+}
+
+.active {
+  background-color: #b4b4b4;
 }

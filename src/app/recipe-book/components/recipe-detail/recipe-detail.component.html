@@ -28,9 +28,7 @@
     <p class="ingredients-header">Ingredients:</p>
 
     <div class="ingredients" *ngFor="let ingredients of recipe.ingredients">
-      <p>{{ ingredients.name }} -</p>
-
-      <p>{{ ingredients.amount }}</p>
+      <p>{{ ingredients.name }} - {{ ingredients.amount }}</p>
     </div>
   </div>
 </div>
