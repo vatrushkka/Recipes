@@ -1,19 +1,31 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Recipe } from 'src/app/recipe-book/models/recipe.model';
-
 import { RecipesService } from '../../services/recipes.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-detail',
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.scss'],
 })
-export class RecipeDetailComponent {
-  @Input() recipe: Recipe;
+export class RecipeDetailComponent implements OnInit {
+  public recipe: Recipe;
+  public id: number;
   public show = false;
 
-  constructor(public recipeService: RecipesService) {
+  constructor(private recipeService: RecipesService,
+              private route: ActivatedRoute) {
+  }
+
+  public ngOnInit(): void {
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.id = +params.id;
+          this.recipe = this.recipeService.getRecipe(this.id);
+        }
+      );
   }
 
   public onClickedOutside(): void {
