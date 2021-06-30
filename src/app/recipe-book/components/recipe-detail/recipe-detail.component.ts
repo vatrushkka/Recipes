@@ -19,7 +19,7 @@ export class RecipeDetailComponent implements OnInit {
               private router: Router) {
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.route.params
       .subscribe(
         (params: Params) => {
