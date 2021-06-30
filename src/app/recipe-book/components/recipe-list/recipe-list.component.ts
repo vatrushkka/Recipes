@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Recipe } from 'src/app/recipe-book/models/recipe.model';
-
 import { RecipesService } from '../../services/recipes.service';
 
 @Component({
@@ -15,7 +14,7 @@ export class RecipeListComponent implements OnInit{
   constructor(public recipeService: RecipesService) {
   }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.recipes = this.recipeService.getRecipes();
   }
 }

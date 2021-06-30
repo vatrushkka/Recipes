@@ -28,10 +28,7 @@ import { RecipesService } from './services/recipes.service';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{
-      path: '',
-      component: RecipesComponent
-    }]),
+    RouterModule.forChild([]),
     ClickOutsideModule
   ],
   providers: [
