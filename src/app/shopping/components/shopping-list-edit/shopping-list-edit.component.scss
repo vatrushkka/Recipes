@@ -1,32 +1,35 @@
 .container {
 
   .form {
-    display: flex;
 
-    .form-item {
+    .inputs-container {
       display: flex;
-      flex-direction: column;
-      font-weight: 500;
-      font-size: 2vmin;
 
-      input {
-        color: #333;
-        border-radius: 0.5vmin;
-        border: 1px solid #333;
-        outline: none;
-        padding: 1vmin 1.5vmin;
-        font-family: 'Montserrat', sans-serif;
+      .form-item {
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
         font-size: 2vmin;
+
+        input {
+          color: #333;
+          border-radius: 0.5vmin;
+          border: 1px solid #333;
+          outline: none;
+          padding: 1vmin 1.5vmin;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 2vmin;
+        }
       }
-    }
 
-    .name {
-      width: 40vmin;
-      margin-right: 1vmin;
-    }
+      .name {
+        width: 40vmin;
+        margin-right: 1vmin;
+      }
 
-    .amount {
-      width: 10vmin;
+      .amount {
+        width: 10vmin;
+      }
     }
   }
 
@@ -42,9 +45,13 @@
       border-radius: 0.5vmin;
       color: #333;
       font-size: 2vmin;
+
+      &:disabled {
+        opacity: 0.5;
+      }
     }
 
-    .add-button{
+    .add-button {
       background-color: #A7C4BC;
     }
 

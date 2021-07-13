@@ -1,23 +1,25 @@
 <div class="container">
-  <form class="form">
-    <div class="form-item name">
-      <label>Name</label>
+  <form class="form" (ngSubmit)="onAddIngredient(form)" #form="ngForm">
+    <div class="inputs-container">
+      <div class="form-item name">
+        <label for="name">Name</label>
 
-      <input type="text" #nameInput>
+        <input id="name" type="text" name="nameInput" ngModel required>
+      </div>
+
+      <div class="form-item amount">
+        <label for="amount">Amount</label>
+
+        <input id="amount" type="number" name="amountInput" min="1" ngModel required>
+      </div>
     </div>
 
-    <div class="form-item amount">
-      <label>Amount</label>
+    <div class="buttons">
+      <button type="submit" class="add-button" [disabled]="!form.valid">Add</button>
 
-      <input type="number" min="1" max="10" #amountInput>
+      <button type="button" class="delete-button">Delete</button>
+
+      <button type="button" class="clear-button">Clear</button>
     </div>
   </form>
-
-  <div class="buttons">
-    <button class="add-button" (click)="onAddIngredient()">Add</button>
-
-    <button class="delete-button">Delete</button>
-
-    <button class="clear-button">Clear</button>
-  </div>
 </div>
