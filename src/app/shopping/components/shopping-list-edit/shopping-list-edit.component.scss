@@ -34,10 +34,7 @@
   }
 
   .buttons {
-    width: 30vmin;
     margin-top: 1vmin;
-    display: flex;
-    justify-content: space-between;
 
     button {
       padding: 1vmin 2vmin;
@@ -53,10 +50,12 @@
 
     .add-button {
       background-color: #A7C4BC;
+      margin-right: 1vmin;
     }
 
     .delete-button {
       background-color: #d08181;
+      margin-right: 1vmin;
     }
 
     .clear-button {

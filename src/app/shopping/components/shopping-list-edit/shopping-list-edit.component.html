@@ -17,7 +17,7 @@
     <div class="buttons">
       <button type="submit" class="add-button" [disabled]="!form.valid">{{ editMode ? 'Update' : 'Add'}}</button>
 
-      <button type="button" class="delete-button">Delete</button>
+      <button type="button" class="delete-button" *ngIf="editMode" (click)="onDelete()">Delete</button>
 
       <button type="button" class="clear-button" (click)="onClear()">Clear</button>
     </div>

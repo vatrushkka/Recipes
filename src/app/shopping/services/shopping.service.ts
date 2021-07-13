@@ -35,4 +35,9 @@ export class ShoppingService {
     this.ingredients.push(...newIngredients);
     this.ingredientRef.next(this.ingredients.slice());
   }
+
+  public deleteIngredient(index: number): void {
+    this.ingredients.splice(index, 1);
+    this.ingredientRef.next(this.ingredients.slice());
+  }
 }
