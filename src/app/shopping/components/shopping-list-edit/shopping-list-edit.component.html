@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="form" (ngSubmit)="onAddIngredient(form)" #form="ngForm">
+  <form class="form" (ngSubmit)="onSubmitIngredient(form)" #form="ngForm">
     <div class="inputs-container">
       <div class="form-item name">
         <label for="name">Name</label>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="buttons">
-      <button type="submit" class="add-button" [disabled]="!form.valid">Add</button>
+      <button type="submit" class="add-button" [disabled]="!form.valid">{{ editMode ? 'Update' : 'Add'}}</button>
 
       <button type="button" class="delete-button">Delete</button>
 
