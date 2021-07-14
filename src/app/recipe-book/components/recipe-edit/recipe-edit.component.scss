@@ -32,6 +32,12 @@
     margin-bottom: 1vmin;
     font-weight: 400;
     font-size: 1.7vmin;
+
+    textarea {
+      width: 80vmin;
+      max-width: 80vmin;
+      min-width: 80vmin;
+    }
   }
 
   .ingredients-container {
@@ -42,17 +48,16 @@
 
     .ingredients-form {
       display: flex;
+      justify-content: space-between;
       margin-bottom: 1vmin;
       font-weight: 400;
       font-size: 1.7vmin;
+      width: 80vmin;
 
-      .form-item {
-      }
         .name {
-
           input {
             width: 50vmin;
-            margin: 0 1vmin;
+            margin-left: 1vmin;
           }
         }
 
