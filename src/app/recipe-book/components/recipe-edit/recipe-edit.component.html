@@ -1,21 +1,21 @@
 <div class="container">
-  <form>
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
     <div class="buttons">
-      <button type="submit" class="save-button">Save</button>
+      <button type="submit" class="save-button" [disabled]="!recipeForm.valid">Save</button>
 
       <button type="button" class="cancel-button">Cancel</button>
     </div>
 
     <div class="input-container">
-      <label for="name">Name</label>
+      <label class="opacity" for="name">Name</label>
 
-      <input type="text" id="name">
+      <input type="text" id="name" formControlName="recipeName">
     </div>
 
     <div class="input-container">
-      <label for="img">Image URL</label>
+      <label class="opacity" for="img">Image URL</label>
 
-      <input type="text" id="img">
+      <input type="text" id="img" formControlName="recipeImage">
     </div>
 
     <div class="input-container">
@@ -23,39 +23,40 @@
     </div>
 
     <div class="input-container">
-      <label for="description">Description</label>
+      <label class="opacity" for="description">Description</label>
 
-      <textarea id="description" rows="6"></textarea>
+      <textarea id="description" rows="6" formControlName="recipeDescription"></textarea>
     </div>
 
-    <div class="ingredients-container">
+    <div class="ingredients-container" formArrayName="recipeIngredients">
       <p>Ingredients:</p>
 
-      <div class="ingredients-form">
-        <div class="form-item name">
-          <label for="ingredient-name">Name</label>
-
-          <input id="ingredient-name" type="text" name="nameInput" ngModel required>
+      <div class="ingredients-form"
+           *ngFor="let ingredient of controls, let i = index"
+            [formGroupName]="i">
+        <div class="name">
+          <input
+            id="ingredient-name"
+            type="text"
+            formControlName="ingredientName">
         </div>
 
-        <div class="form-item amount">
-          <label for="ingredient-amount">Amount</label>
-
-          <input id="ingredient-amount" type="number" name="amountInput" pattern="^[1-9]+[0-9]*" ngModel required>
+        <div class="amount">
+          <input
+            id="ingredient-amount"
+            type="number"
+            formControlName="ingredientAmount">
         </div>
+
+        <button type="button" class="delete-ingredient">X</button>
       </div>
 
-      <div class="ingredient">
-        <div class="ingredient-container">
-          <p class="ingredient-name">Ingredient</p>
-
-          <p>Amount</p>
-        </div>
-
-        <button type="button">
-          <img src="../../../../assets/trash.png" alt="delete">
-        </button>
-      </div>
+      <button
+        type="button"
+        class="add-ingredient"
+        (click)="AddIngredient()"
+        [disabled]="!recipeForm.get('recipeIngredients').valid"
+      >Add ingredient</button>
     </div>
   </form>
 </div>

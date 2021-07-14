@@ -1,7 +1,7 @@
 // modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ClickOutsideModule } from 'ng-click-outside';
 
@@ -27,7 +27,7 @@ import { RecipesService } from './services/recipes.service';
   ],
   imports: [
     CommonModule,
-    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild([]),
     ClickOutsideModule
   ],

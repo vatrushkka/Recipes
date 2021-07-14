@@ -1,4 +1,4 @@
-import {  Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import { Recipe } from '../models/recipe.model';
 import { Ingredient } from 'src/app/shared/models/ingredient.model';
@@ -33,6 +33,7 @@ export class RecipesService {
   public getRecipes(): Recipe[] {
     return this.recipes.slice();
   }
+
   public onIngredientsToList(newIngredients: Ingredient[]): void {
     this.shoppingService.onAddIngredients(newIngredients);
   }
