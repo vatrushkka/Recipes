@@ -1,0 +1,115 @@
+.container {
+  padding-top: 1vmin;
+
+  .buttons {
+
+    button {
+      padding: 1vmin 2vmin;
+      margin-bottom: 1vmin;
+      border: none;
+      border-radius: 0.5vmin;
+      color: #333;
+      font-size: 2vmin;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    .save-button {
+      background-color: #A7C4BC;
+      margin-right: 1vmin;
+    }
+
+    .cancel-button {
+      background-color: #d08181;
+    }
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1vmin;
+    font-weight: 400;
+    font-size: 1.7vmin;
+  }
+
+  .ingredients-container {
+    margin-bottom: 1vmin;
+    font-weight: 400;
+    font-size: 1.7vmin;
+
+
+    .ingredients-form {
+      display: flex;
+      margin-bottom: 1vmin;
+      font-weight: 400;
+      font-size: 1.7vmin;
+
+      .form-item {
+      }
+        .name {
+
+          input {
+            width: 50vmin;
+            margin: 0 1vmin;
+          }
+        }
+
+        .amount {
+          input {
+            margin-left: 1vmin;
+            width: 7vmin;
+          }
+        }
+    }
+
+    .ingredient {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #b4b4b4;
+
+      .ingredient-container {
+        display: flex;
+
+        .ingredient-name {
+          margin-right: 2vmin;
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        height: 3vmin;
+        border: none;
+        border-radius: 0.5vmin;
+        color: #333;
+        background-color: #d08181;
+        font-size: 2vmin;
+
+        &:disabled {
+          opacity: 0.5;
+        }
+
+        img {
+          width: 2vmin;
+        }
+      }
+    }
+  }
+}
+
+input {
+  color: #333;
+  border-radius: 0.5vmin;
+  border: 1px solid #333;
+  outline: none;
+  padding: 1vmin 1.5vmin;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vmin;
+}
+
+label {
+  margin-bottom: 0.6vmin;
+}
