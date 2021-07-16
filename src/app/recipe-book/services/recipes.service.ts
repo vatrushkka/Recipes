@@ -9,7 +9,7 @@ import { ShoppingService } from 'src/app/shopping/services/shopping.service';
 export class RecipesService {
   public recipeRef = new Subject<Recipe[]>();
 
-  private recipes: Recipe[] = [
+  public recipes: Recipe[] = [
     new Recipe(
       'Name of recipe',
       'some description',
@@ -48,6 +48,7 @@ export class RecipesService {
   public updateRecipe(index: number, newRecipe: Recipe): void {
     this.recipes[index] = newRecipe;
     this.recipeRef.next(this.recipes.slice());
+    console.log('service' + this.recipes[index].ingredients)
   }
 
   public addRecipe(newRecipe: Recipe): void {
