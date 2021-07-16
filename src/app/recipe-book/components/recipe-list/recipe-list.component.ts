@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { Recipe } from 'src/app/recipe-book/models/recipe.model';
@@ -16,7 +16,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   constructor(public recipeService: RecipesService) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.subscription = this.recipeService.recipeRef
       .subscribe(
         (recipes: Recipe[]) => {
@@ -25,11 +25,9 @@ export class RecipeListComponent implements OnInit, OnDestroy {
       );
 
     this.recipes = this.recipeService.getRecipes();
-
-    console.log('list-component' + this.recipes)
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 }

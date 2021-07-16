@@ -9,13 +9,13 @@
     <div class="input-container">
       <label class="opacity" for="name">Name</label>
 
-      <input type="text" id="name" formControlName="recipeName">
+      <input type="text" id="name" formControlName="name">
     </div>
 
     <div class="input-container">
       <label class="opacity" for="img">Image URL</label>
 
-      <input type="text" id="img" formControlName="recipeImage">
+      <input type="text" id="img" formControlName="image">
     </div>
 
     <div class="input-container">
@@ -25,10 +25,10 @@
     <div class="input-container">
       <label class="opacity" for="description">Description</label>
 
-      <textarea id="description" rows="6" formControlName="recipeDescription"></textarea>
+      <textarea id="description" rows="6" formControlName="desc"></textarea>
     </div>
 
-    <div class="ingredients-container" formArrayName="recipeIngredients">
+    <div class="ingredients-container" formArrayName="ingredients">
       <p>Ingredients:</p>
 
       <div class="ingredients-form"
@@ -38,14 +38,14 @@
           <input
             id="ingredient-name"
             type="text"
-            formControlName="ingredientName">
+            formControlName="name">
         </div>
 
         <div class="amount">
           <input
             id="ingredient-amount"
             type="number"
-            formControlName="ingredientAmount">
+            formControlName="amount">
         </div>
 
         <button type="button" class="delete-ingredient">X</button>
@@ -55,7 +55,7 @@
         type="button"
         class="add-ingredient"
         (click)="AddIngredient()"
-        [disabled]="!recipeForm.get('recipeIngredients').valid"
+        [disabled]="!recipeForm.get('ingredients').valid"
       >Add ingredient</button>
     </div>
   </form>

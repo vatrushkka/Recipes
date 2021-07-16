@@ -1,10 +1,8 @@
-import {Component, OnInit, Output} from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 
 import { ActivatedRoute, Params } from '@angular/router';
 import { RecipesService } from '../../services/recipes.service';
-import { Recipe } from '../../models/recipe.model';
-import {Ingredient} from '../../../shared/models/ingredient.model';
 
 @Component({
   selector: 'app-recipe-edit',
@@ -18,7 +16,7 @@ export class RecipeEditComponent implements OnInit {
   public recipeForm: FormGroup;
 
   get controls() {
-    return (<FormArray>this.recipeForm.get('recipeIngredients')).controls;
+    return (<FormArray>this.recipeForm.get('ingredients')).controls;
   }
 
   constructor(private route: ActivatedRoute,
@@ -37,27 +35,18 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    const newRecipe = new Recipe(
-      this.recipeForm.value.recipeName,
-      this.recipeForm.value.recipeDescription,
-      this.recipeForm.value.recipeImage,
-      this.recipeForm.value['recipeIngredients']
-    )
-
     if (this.editMode) {
-      this.recipeService.updateRecipe(this.id, newRecipe)
+      this.recipeService.updateRecipe(this.id, this.recipeForm.value)
     } else {
-      this.recipeService.addRecipe(newRecipe);
+      this.recipeService.addRecipe(this.recipeForm.value);
     }
-
-    console.log('edit component' + newRecipe.ingredients)
   }
 
   public AddIngredient(): void {
-    (<FormArray>this.recipeForm.get('recipeIngredients')).push(
+    (<FormArray>this.recipeForm.get('ingredients')).push(
       new FormGroup({
-        'ingredientName': new FormControl('', Validators.required),
-        'ingredientAmount': new FormControl('', [
+        'name': new FormControl('', Validators.required),
+        'amount': new FormControl('', [
           Validators.required,
           Validators.pattern(/^[1-9]+[0-9]*/)
         ])
@@ -81,8 +70,8 @@ export class RecipeEditComponent implements OnInit {
         for (let ingredient of recipe.ingredients) {
           recipeIngredients.push(
             new FormGroup({
-              'ingredientName': new FormControl(ingredient.name, Validators.required),
-              'ingredientAmount': new FormControl(ingredient.amount, [
+              'name': new FormControl(ingredient.name, Validators.required),
+              'amount': new FormControl(ingredient.amount, [
                 Validators.required,
                 Validators.pattern(/^[1-9]+[0-9]*/)
               ])
@@ -93,10 +82,10 @@ export class RecipeEditComponent implements OnInit {
     }
 
     this.recipeForm = new FormGroup({
-      'recipeName': new FormControl(recipeName, Validators.required),
-      'recipeDescription': new FormControl(recipeDescription, Validators.required),
-      'recipeImage': new FormControl(recipeImage, Validators.required),
-      'recipeIngredients': recipeIngredients
+      'name': new FormControl(recipeName, Validators.required),
+      'desc': new FormControl(recipeDescription, Validators.required),
+      'image': new FormControl(recipeImage, Validators.required),
+      'ingredients': recipeIngredients
     });
   }
 }

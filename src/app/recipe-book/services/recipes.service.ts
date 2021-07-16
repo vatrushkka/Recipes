@@ -18,7 +18,7 @@ export class RecipesService {
         new Ingredient('meat', 2),
         new Ingredient('apple', 7)
       ]
-      ),
+    ),
     new Recipe(
       'Test recipe',
       'some description',
@@ -48,7 +48,6 @@ export class RecipesService {
   public updateRecipe(index: number, newRecipe: Recipe): void {
     this.recipes[index] = newRecipe;
     this.recipeRef.next(this.recipes.slice());
-    console.log('service' + this.recipes[index].ingredients)
   }
 
   public addRecipe(newRecipe: Recipe): void {
