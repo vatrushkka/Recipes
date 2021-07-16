@@ -36,6 +36,10 @@
     margin-bottom: 1vmin;
     font-weight: 400;
     font-size: 1.7vmin;
+
+    img {
+      width: 80vmin;
+    }
   }
 
   .ingredients-container {
@@ -81,18 +85,38 @@
       }
     }
 
-    .add-ingredient {
-      padding: 1vmin 2vmin;
-      border: none;
-      border-radius: 0.5vmin;
-      color: #333;
-      font-size: 2vmin;
-      background-color: #D7B19D;
+    .ingredients-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5vmin;
 
-      &:disabled {
-        opacity: 0.5;
+      .add-ingredient {
+        padding: 1vmin 2vmin;
+        border: none;
+        border-radius: 0.5vmin;
+        color: #333;
+        font-size: 2vmin;
+        background-color: #A7C4BC;
+
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+
+      .remove-all-ingredients {
+        padding: 1vmin 2vmin;
+        border: none;
+        border-radius: 0.5vmin;
+        color: #333;
+        font-size: 2vmin;
+        background-color: #d08181;
+
+        &:disabled {
+          opacity: 0.5;
+        }
       }
     }
+
   }
 }
 
