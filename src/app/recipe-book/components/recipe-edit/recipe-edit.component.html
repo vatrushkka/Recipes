@@ -4,41 +4,34 @@
       <button
         type="submit"
         class="save-button"
-        [disabled]="!recipeForm.valid"
-      >Save</button>
+        [disabled]="!recipeForm.valid">
+        Save
+      </button>
 
       <button
         type="button"
         class="cancel-button"
-        (click)="onCancel()"
-      >Cancel</button>
+        (click)="onCancel()">
+        Cancel
+      </button>
     </div>
-
     <div class="input-container">
       <label class="opacity" for="name">Name</label>
-
       <input type="text" id="name" formControlName="name">
     </div>
-
     <div class="input-container">
       <label class="opacity" for="img">Image URL</label>
-
       <input type="text" id="img" formControlName="image" #recipeImg>
     </div>
-
     <div class="input-container">
       <img [src]="recipeImg.value" alt="">
     </div>
-
     <div class="input-container">
       <label class="opacity" for="description">Description</label>
-
       <textarea id="description" rows="6" formControlName="description"></textarea>
     </div>
-
     <div class="ingredients-container" formArrayName="ingredients">
       <p>Ingredients:</p>
-
       <div class="ingredients-form"
            *ngFor="let ingredient of controls, let i = index"
             [formGroupName]="i">
@@ -48,34 +41,31 @@
             type="text"
             formControlName="name">
         </div>
-
         <div class="amount">
           <input
             id="ingredient-amount"
             type="number"
             formControlName="amount">
         </div>
-
         <button
           type="button"
           class="delete-ingredient"
-          (click)="onDeleteIngredient(i)"
-        >X</button>
+          (click)="onDeleteIngredient(i)">X</button>
       </div>
-
       <div class="ingredients-buttons">
         <button
           type="button"
           class="add-ingredient"
           (click)="addIngredient()"
-          [disabled]="!recipeForm.get('ingredients').valid"
-        >Add ingredient</button>
-
+          [disabled]="!recipeForm.get('ingredients').valid">
+          Add ingredient
+        </button>
         <button
           type="button"
           class="remove-all-ingredients"
-          (click)="removeAllIngredient()"
-        >Clear ingredients</button>
+          (click)="removeAllIngredient()">
+          Clear ingredients
+        </button>
       </div>
     </div>
   </form>

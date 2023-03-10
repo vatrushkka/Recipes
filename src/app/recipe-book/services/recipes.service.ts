@@ -30,8 +30,7 @@ export class RecipesService {
     )
   ];
 
-  constructor(public shoppingService: ShoppingService) {
-  }
+  constructor(public shoppingService: ShoppingService) {}
 
   public getRecipes(): Recipe[] {
     return this.recipes.slice();

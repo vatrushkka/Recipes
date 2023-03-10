@@ -2,23 +2,17 @@
   <div class="left">
     <div class="items-container">
       <a class="header">Recipe Book</a>
-
       <a class="header-item" routerLink="/recipes" routerLinkActive="active">Recipes</a>
-
       <a class="header-item" routerLink="/shopping-list" routerLinkActive="active">Shopping List</a>
     </div>
   </div>
-
   <div class="dropdown" (clickOutside)="onClickedOutside()">
     <div class="drop" (click)="open = !open">
-      <button  class="drop">Manage</button>
-
+      <button class="drop">Manage</button>
       <i id="arrow" [ngClass]="{'up': open}"></i>
     </div>
-
     <div class="dropdown-content" *ngIf="open">
       <a class="drop-item">Save data</a>
-
       <a class="drop-item">Fetch data</a>
     </div>
   </div>

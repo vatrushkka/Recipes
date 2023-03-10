@@ -9,10 +9,8 @@ export class HeaderComponent {
   public open = false;
 
   public onClickedOutside(): void {
-    if (this.open === true) {
+    if (this.open) {
       this.open = false;
-    } else {
-      return;
     }
   }
 }

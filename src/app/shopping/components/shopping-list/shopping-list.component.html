@@ -1,6 +1,5 @@
 <div class="container">
   <app-shopping-list-edit></app-shopping-list-edit>
-
   <div class="content" *ngFor="let ingredient of ingredients; let i = index">
     <p (click)="onEdit(i)">{{ ingredient.name }} ({{ ingredient.amount }})</p>
   </div>

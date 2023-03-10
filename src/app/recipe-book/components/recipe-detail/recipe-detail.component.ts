@@ -16,8 +16,7 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor(private recipeService: RecipesService,
               private route: ActivatedRoute,
-              private router: Router) {
-  }
+              private router: Router) {}
 
   ngOnInit(): void {
     this.route.params
@@ -32,8 +31,6 @@ export class RecipeDetailComponent implements OnInit {
   public onClickedOutside(): void {
     if (this.show === true) {
       this.show = false;
-    } else {
-      return;
     }
   }
 

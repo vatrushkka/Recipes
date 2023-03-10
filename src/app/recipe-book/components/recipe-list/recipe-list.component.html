@@ -1,6 +1,5 @@
 <div class="recipes">
   <button routerLink="create">New recipe</button>
-
   <app-recipe-item
     *ngFor="let recipeItem of recipes; let i = index"
     [recipe]="recipeItem"

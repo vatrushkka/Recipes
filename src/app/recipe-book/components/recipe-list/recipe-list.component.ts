@@ -11,18 +11,15 @@ import { RecipesService } from '../../services/recipes.service';
 })
 export class RecipeListComponent implements OnInit, OnDestroy {
   public recipes: Recipe[];
-  public subscription: Subscription
+  public subscription: Subscription;
 
-  constructor(public recipeService: RecipesService) {
-  }
+  constructor(public recipeService: RecipesService) {}
 
   ngOnInit(): void {
     this.subscription = this.recipeService.recipeRef
-      .subscribe(
-        (recipes: Recipe[]) => {
+      .subscribe((recipes: Recipe[]) => {
           this.recipes = recipes;
-        }
-      );
+        });
 
     this.recipes = this.recipeService.getRecipes();
   }

@@ -1,10 +1,8 @@
 <div class="container">
   <div class="center">
     <img [src]="recipe.image" alt="{{ recipe.name }}">
-
     <div class="name">
       <p class="details-header">{{ recipe.name }}</p>
-
       <div class="dropdown" (clickOutside)="onClickedOutside()">
         <button (click)="show = !show">
           Manage recipe
@@ -13,9 +11,7 @@
 
         <div class="dropdown-content" *ngIf="show">
           <a class="drop-item" (click)="toShoppingList()">To shopping list</a>
-
           <a class="drop-item" (click)="onEdit()">Edit recipe</a>
-
           <a class="drop-item" (click)="onDeleteRecipe()">Delete recipe</a>
         </div>
       </div>
@@ -26,7 +22,6 @@
 
   <div class="details-ingredients" >
     <p class="ingredients-header">Ingredients:</p>
-
     <div class="ingredients" *ngFor="let ingredients of recipe.ingredients">
       <p>{{ ingredients.name }} - {{ ingredients.amount }}</p>
     </div>
